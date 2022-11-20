@@ -55,14 +55,14 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	switch m.Content {
 	case prefix + " nyt":
-		s.ChannelMessageSend(m.ChannelID, prices.Now)
+		s.ChannelMessageSend(m.ChannelID, prices.Now + " snt/kWh")
 	case prefix + " alin":
-		s.ChannelMessageSend(m.ChannelID, prices.Min)
+		s.ChannelMessageSend(m.ChannelID, prices.Min + " snt/kWh")
 	case prefix + " ylin":
-		s.ChannelMessageSend(m.ChannelID, prices.Max)
+		s.ChannelMessageSend(m.ChannelID, prices.Max + " snt/kWh")
 	case prefix + " vk":
-		s.ChannelMessageSend(m.ChannelID, prices.Avg)
+		s.ChannelMessageSend(m.ChannelID, prices.Avg + " snt/kWh")
 	case prefix + " kk":
-		s.ChannelMessageSend(m.ChannelID, prices.Avg_28)
+		s.ChannelMessageSend(m.ChannelID, prices.Avg_28 + " snt/kWh")
 	}
 }
